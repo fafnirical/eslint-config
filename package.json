@@ -1,0 +1,18 @@
+{
+  "name": "@fafnirical/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint rules according to fafnirical's personal preferences",
+  "homepage": "https://github.com/fafnirical/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/fafnirical/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fafnirical/eslint-config"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "fafnirical",
+    "url": "https://github.com/fafnirical"
+  }
+}
