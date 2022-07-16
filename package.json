@@ -16,11 +16,16 @@
     "url": "https://github.com/fafnirical"
   },
   "scripts": {
-    "format": "prettier --cache --write .",
-    "lint": "prettier --cache --check .",
+    "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
+    "format:package-json": "sort-package-json",
+    "format:prettier": "prettier --cache --write .",
+    "lint": "concurrently --names \"lint:\" \"npm:lint:*\"",
+    "lint:package-json": "sort-package-json --check",
+    "lint:prettier": "prettier --cache --check .",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "concurrently": "^7.2.2",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
