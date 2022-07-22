@@ -17,15 +17,19 @@
   },
   "scripts": {
     "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
+    "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
     "format:package-json": "sort-package-json",
     "format:prettier": "prettier --cache --write .",
     "lint": "concurrently --names \"lint:\" \"npm:lint:*\"",
+    "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
     "lint:package-json": "sort-package-json --check",
     "lint:prettier": "prettier --cache --check .",
     "prepare": "husky install"
   },
   "devDependencies": {
     "concurrently": "^7.2.2",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
