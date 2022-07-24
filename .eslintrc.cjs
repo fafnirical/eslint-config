@@ -1,5 +1,5 @@
 /** @type {import('eslint').Linter.Config<import('eslint/rules').ESLintRules> & import('@typescript-eslint/utils').TSESLint.Linter.Config} */
-module.exports = {
+const config = {
   root: true,
   plugins: ['@typescript-eslint'],
   extends: [
@@ -21,16 +21,10 @@ module.exports = {
   reportUnusedDisableDirectives: true,
   overrides: [
     {
-      files: '*.cjs',
-      parserOptions: {
-        sourceType: 'script',
-      },
-    },
-    {
-      files: '*.mjs',
-      parserOptions: {
-        sourceType: 'module',
-      },
+      // This override acts only as a list of file extensions to lint.
+      files: ['*.js', '*.mjs', '*.cjs', '*.ts', '*.mts', '*.cts'],
     },
   ],
 };
+
+module.exports = config;

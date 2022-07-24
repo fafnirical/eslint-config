@@ -1,7 +1,16 @@
-const prettier = 'prettier --ignore-unknown --write';
+/**
+ * @typedef {string} Linter
+ * @typedef {(filenames: string[]) => Linter | Linter[] | Promise<Linter>} FunctionLinter
+ * @typedef {Record<string, Linter | FunctionLinter | Array<Linter | FunctionLinter>>} LintStagedConfig
+ */
 
-export default {
-  '*, !package.json, !*.{js,mjs,cjs,ts,mts,cts}': prettier,
+const prettier = 'prettier --write';
+
+/**
+ * @type {LintStagedConfig}
+ */
+const config = {
+  '*, !package.json, !*.{js,mjs,cjs,ts,mts,cts}': `${prettier} --ignore-unknown`,
   '*.{js,mjs,cjs,ts,mts,cts}': [
     () => 'tsc --project tsconfig.eslint.json',
     'eslint --fix',
@@ -9,3 +18,5 @@ export default {
   ],
   'package.json': ['sort-package-json', prettier],
 };
+
+export default config;
