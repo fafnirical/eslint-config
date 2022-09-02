@@ -23,13 +23,13 @@
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
     "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
-    "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
+    "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --ignore-path .gitignore --fix .",
     "format:package-json": "sort-package-json",
-    "format:prettier": "prettier --cache --write .",
+    "format:prettier": "prettier --cache --ignore-path .gitignore --write .",
     "lint": "concurrently --names \"lint:\" \"npm:lint:*\"",
-    "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
+    "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --ignore-path .gitignore .",
     "lint:package-json": "sort-package-json --check",
-    "lint:prettier": "prettier --cache --check .",
+    "lint:prettier": "prettier --cache --ignore-path .gitignore --check .",
     "lint:tsc": "tsc --project tsconfig.eslint.json",
     "prepare": "husky install"
   },
