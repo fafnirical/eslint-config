@@ -1,6 +1,6 @@
 {
   "name": "@fafnirical/eslint-config",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "ESLint rules according to fafnirical's personal preferences",
   "homepage": "https://github.com/fafnirical/eslint-config#readme",
   "bugs": {
@@ -15,7 +15,13 @@
     "name": "fafnirical",
     "url": "https://github.com/fafnirical"
   },
+  "exports": {
+    ".": "./dist/base.cjs",
+    "./typescript": "./dist/typescript.cjs"
+  },
+  "main": "./dist/base.cjs",
   "scripts": {
+    "build": "tsc --project tsconfig.build.json",
     "format": "concurrently --names \"format:\" \"npm:format:*(!prettier)\" && npm run format:prettier",
     "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
     "format:package-json": "sort-package-json",

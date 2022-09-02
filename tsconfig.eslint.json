@@ -6,6 +6,7 @@
     "allowJs": true
   },
   "include": [
+    "src",
     ".eslintrc.cjs",
     "lint-staged.config.mjs",
     "prettier.config.cjs"
