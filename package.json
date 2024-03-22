@@ -21,14 +21,18 @@
   "type": "module",
   "scripts": {
     "format": "concurrently \"npm:format:*(!prettier)\" && npm run format:prettier",
+    "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
     "format:package-json": "sort-package-json",
     "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --write .",
     "lint": "concurrently \"npm:lint:*\"",
+    "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
     "lint:package-json": "sort-package-json --check",
     "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --check ."
   },
   "devDependencies": {
+    "@eslint/js": "^8.57.0",
     "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "sort-package-json": "^2.8.0"
   },
