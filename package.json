@@ -20,11 +20,14 @@
   },
   "type": "module",
   "scripts": {
-    "format": "prettier --cache --cache-location node_modules/.cache/prettier --write .",
-    "lint": "prettier --cache --cache-location node_modules/.cache/prettier --check ."
+    "format:package-json": "sort-package-json",
+    "format:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --write .",
+    "lint:package-json": "sort-package-json --check",
+    "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --check ."
   },
   "devDependencies": {
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "sort-package-json": "^2.8.0"
   },
   "engines": {
     "node": ">=20.9.0"
