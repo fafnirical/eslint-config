@@ -19,6 +19,13 @@
     "url": "https://github.com/fafnirical"
   },
   "type": "module",
+  "scripts": {
+    "format": "prettier --cache --cache-location node_modules/.cache/prettier --write .",
+    "lint": "prettier --cache --cache-location node_modules/.cache/prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
   "engines": {
     "node": ">=20.9.0"
   }
