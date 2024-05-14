@@ -19,7 +19,29 @@
     "url": "https://github.com/fafnirical"
   },
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./typescript": {
+      "import": "./dist/typescript.js",
+      "types": "./dist/typescript.d.ts"
+    },
+    "./javascript": {
+      "import": "./dist/javascript.js",
+      "types": "./dist/javascript.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "build:watch": "tsc --build tsconfig.build.json --watch",
+    "clean": "tsc --build tsconfig.build.json --clean",
     "format": "concurrently \"npm:format:*(!prettier)\" && npm run format:prettier",
     "format:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix .",
     "format:package-json": "sort-package-json",
@@ -27,17 +49,25 @@
     "lint": "concurrently \"npm:lint:*\"",
     "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint .",
     "lint:package-json": "sort-package-json --check",
-    "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --check ."
+    "lint:prettier": "prettier --cache --cache-location node_modules/.cache/prettier --check .",
+    "lint:typescript": "tsc --noEmit --project tsconfig.json"
   },
-  "devDependencies": {
+  "dependencies": {
     "@eslint/js": "^8.57.0",
     "@types/eslint__js": "^8.42.3",
+    "typescript-eslint": "^7.8.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@tsconfig/strictest": "^2.0.5",
     "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "sort-package-json": "^2.10.0",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^7.8.0"
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.21.0"
   },
   "engines": {
     "node": ">=20.9.0"
