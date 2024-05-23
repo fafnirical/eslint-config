@@ -1,6 +1,9 @@
 import { configs } from 'typescript-eslint';
 import type { Config } from './types.js';
 
-const config: Config[] = [...configs.strict, ...configs.stylistic];
+const config: Config[] = [
+  ...configs.strictTypeChecked,
+  ...configs.stylisticTypeChecked,
+];
 
 export default config;

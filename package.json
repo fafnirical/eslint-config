@@ -55,6 +55,7 @@
   "dependencies": {
     "@eslint/js": "^8.57.0",
     "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.12.12",
     "typescript-eslint": "^7.9.0"
   },
   "devDependencies": {
@@ -70,6 +71,6 @@
     "eslint": ">=8.21.0"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=20.11.0"
   }
 }
