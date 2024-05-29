@@ -25,12 +25,12 @@
       "types": "./dist/index.d.ts"
     },
     "./typescript": {
-      "import": "./dist/typescript.js",
-      "types": "./dist/typescript.d.ts"
+      "import": "./dist/configs/typescript.js",
+      "types": "./dist/configs/typescript.d.ts"
     },
     "./javascript": {
-      "import": "./dist/javascript.js",
-      "types": "./dist/javascript.d.ts"
+      "import": "./dist/configs/javascript.js",
+      "types": "./dist/configs/javascript.d.ts"
     }
   },
   "main": "./dist/index.js",
