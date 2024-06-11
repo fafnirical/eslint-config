@@ -63,9 +63,10 @@
   "dependencies": {
     "@eslint/js": "^8.57.0",
     "@types/eslint": "^8.56.10",
-    "@types/eslint__js": "^8.42.3",
     "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.14.2",
+    "eslint-config-flat-gitignore": "^0.1.5",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.10.0",
     "package-up": "^5.0.0",

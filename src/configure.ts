@@ -7,6 +7,8 @@ export default async function configure(): Promise<Config[]> {
 
   /* eslint-disable @typescript-eslint/no-var-requires */
   return [
+    (await import('eslint-config-flat-gitignore')).default(),
+
     ...(await import('./configs/javascript.js')).default,
 
     ...(hasDependency(dependencies, 'typescript') ?
