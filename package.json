@@ -65,7 +65,7 @@
     "@types/eslint": "^8.56.10",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.10",
     "eslint-config-flat-gitignore": "^0.1.5",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.10.0",
