@@ -80,7 +80,7 @@
     "eslint": "^8.57.0",
     "prettier": "^3.3.3",
     "sort-package-json": "^2.10.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.3"
   },
   "peerDependencies": {
     "eslint": ">=8.21.0"
