@@ -12,6 +12,7 @@ export default async function configure(): Promise<Config[]> {
         reportUnusedDisableDirectives: true,
       },
     },
+    ...(await import('./configs/comments.js')).default,
 
     ...(await import('./configs/javascript.js')).default,
 
