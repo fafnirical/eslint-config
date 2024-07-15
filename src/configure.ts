@@ -5,9 +5,13 @@ import { getDependencies, hasDependency } from './utils/dependencies.js';
 export default async function configure(): Promise<Config[]> {
   const dependencies = getDependencies();
 
-  /* eslint-disable @typescript-eslint/no-var-requires */
   return [
     (await import('eslint-config-flat-gitignore')).default(),
+    {
+      linterOptions: {
+        reportUnusedDisableDirectives: true,
+      },
+    },
 
     ...(await import('./configs/javascript.js')).default,
 
@@ -21,5 +25,4 @@ export default async function configure(): Promise<Config[]> {
       (await import('./configs/prettier.js')).default
     : []),
   ];
-  /* eslint-enable */
 }
