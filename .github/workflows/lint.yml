@@ -25,5 +25,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npm run build --if-present
-      - run: npm run lint:${{ matrix.lint-task }} --if-present
+      - name: Build
+        run: npm run build --if-present
+      - name: Lint
+        run: npm run lint:${{ matrix.lint-task }} --if-present
