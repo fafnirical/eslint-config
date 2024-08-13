@@ -71,7 +71,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-perfectionist": "^2.11.0",
     "package-up": "^5.0.0",
-    "type-fest": "^4.21.0",
+    "type-fest": "^4.24.0",
     "typescript-eslint": "^7.16.0"
   },
   "devDependencies": {
