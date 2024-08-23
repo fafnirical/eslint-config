@@ -72,7 +72,7 @@
     "eslint-plugin-perfectionist": "^3.2.0",
     "package-up": "^5.0.0",
     "type-fest": "^4.25.0",
-    "typescript-eslint": "^8.1.0"
+    "typescript-eslint": "^8.2.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
