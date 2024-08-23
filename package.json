@@ -61,7 +61,7 @@
     "lint:typescript": "tsc --noEmit --project tsconfig.json"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
     "@eslint/js": "^9.9.0",
     "@types/eslint": "^9.6.0",
     "@types/eslint-config-prettier": "^6.11.3",
