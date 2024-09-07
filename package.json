@@ -69,7 +69,7 @@
     "@types/node": "^22.5.4",
     "eslint-config-flat-gitignore": "^0.3.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-perfectionist": "^3.3.0",
+    "eslint-plugin-perfectionist": "^3.4.0",
     "package-up": "^5.0.0",
     "type-fest": "^4.26.0",
     "typescript-eslint": "^8.4.0"
