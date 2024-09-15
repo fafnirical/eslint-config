@@ -5,7 +5,6 @@ const config = [
   {
     languageOptions: {
       parserOptions: {
-        project: true,
         tsconfigRootDir: import.meta.dirname,
       },
     },
