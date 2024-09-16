@@ -20,6 +20,11 @@ export default async function configure(): Promise<Config[]> {
       (await import('./configs/typescript.js')).default
     : []),
 
+    ...(await import('./configs/imports.js')).default,
+    ...(hasDependency(dependencies, 'typescript') ?
+      (await import('./configs/imports.js')).typescriptConfig
+    : []),
+
     ...(await import('./configs/perfectionist.js')).default,
 
     ...(hasDependency(dependencies, 'prettier') ?
