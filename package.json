@@ -23,22 +23,6 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    },
-    "./javascript": {
-      "import": "./dist/configs/javascript.js",
-      "types": "./dist/configs/javascript.d.ts"
-    },
-    "./typescript": {
-      "import": "./dist/configs/typescript.js",
-      "types": "./dist/configs/typescript.d.ts"
-    },
-    "./perfectionist": {
-      "import": "./dist/configs/perfectionist.js",
-      "types": "./dist/configs/perfectionist.d.ts"
-    },
-    "./prettier": {
-      "import": "./dist/configs/prettier.js",
-      "types": "./dist/configs/prettier.d.ts"
     }
   },
   "main": "./dist/index.js",

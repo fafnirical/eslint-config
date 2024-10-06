@@ -1,7 +1,7 @@
-import baseConfig from './dist/index.js';
+import { configure } from './dist/index.js';
 
 const config = [
-  ...baseConfig,
+  ...(await configure()),
   {
     languageOptions: {
       parserOptions: {
