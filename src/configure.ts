@@ -5,6 +5,7 @@ import { getDependencies, hasDependency } from './utils/dependencies.js';
 interface Options {
   gitignore?: boolean;
   prettier?: boolean;
+  react?: boolean;
   typescript?: boolean;
 }
 
@@ -16,6 +17,7 @@ export default async function configure(
   const {
     gitignore: enableGitignore = true,
     prettier: enablePrettier = hasDependency(dependencies, 'prettier'),
+    react: enableReact = hasDependency(dependencies, 'react'),
     typescript: enableTypescript = hasDependency(dependencies, 'typescript'),
   } = options;
 
@@ -43,6 +45,14 @@ export default async function configure(
       ...(await import('./configs/typescript.js')).default,
       ...(await import('./configs/imports.js')).typescriptConfig,
     );
+  }
+
+  if (enableReact) {
+    configs.push(...(await import('./configs/react.js')).default);
+
+    if (enableTypescript) {
+      configs.push(...(await import('./configs/react.js')).typescriptConfig);
+    }
   }
 
   if (enablePrettier) {
