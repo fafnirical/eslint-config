@@ -64,7 +64,7 @@
     "@tsconfig/strictest": "^2.0.5",
     "concurrently": "^9.1.2",
     "eslint": "^9.20.1",
-    "prettier": "^3.5.1",
+    "prettier": "^3.5.3",
     "sort-package-json": "^2.14.0",
     "typescript": "^5.7.3"
   },
