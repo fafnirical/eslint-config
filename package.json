@@ -52,7 +52,7 @@
     "@types/node": "^22.14.1",
     "eslint-config-flat-gitignore": "^2.1.0",
     "eslint-config-prettier": "^10.1.2",
-    "eslint-import-resolver-oxc": "^0.13.1",
+    "eslint-import-resolver-oxc": "^0.13.2",
     "eslint-plugin-import-x": "^4.10.6",
     "eslint-plugin-perfectionist": "^4.12.2",
     "package-up": "^5.0.0",
