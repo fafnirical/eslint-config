@@ -57,7 +57,7 @@
     "eslint-plugin-perfectionist": "^4.12.3",
     "package-up": "^5.0.0",
     "type-fest": "^4.40.1",
-    "typescript-eslint": "^8.31.1"
+    "typescript-eslint": "^8.35.1"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
