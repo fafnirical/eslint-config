@@ -63,7 +63,7 @@
     "@tsconfig/node22": "^22.0.2",
     "@tsconfig/strictest": "^2.0.5",
     "concurrently": "^9.2.0",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "prettier": "^3.6.2",
     "sort-package-json": "^3.4.0",
     "typescript": "^5.8.3"
